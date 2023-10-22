@@ -9,11 +9,12 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
+    
   },
   {
     path: "xd",
     element: <Tabla/>,
-  },
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
