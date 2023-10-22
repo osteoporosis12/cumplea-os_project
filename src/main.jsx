@@ -7,11 +7,11 @@ import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 import Tabla from './components/Tabla.jsx';
 const router = createBrowserRouter([
   {
-    path: "/xd",
+    path: "/",
     element: <App/>,
   },
   {
-    path: "/",
+    path: "/xd",
     element: <Tabla/>,
   },
 ]);
