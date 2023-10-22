@@ -11,7 +11,7 @@ const router = createBrowserRouter([
     element: <App/>,
   },
   {
-    path: "/xd",
+    path: "/tabla",
     element: <Tabla/>,
   },
 ]);
