@@ -8,11 +8,11 @@ import { createInvitados } from './api/invitados.api';
 function BasicExample() {
   const { register, handleSubmit } = useForm();
   const [modalShow, setModalShow] = useState(false);
-
+  const [nameComplet,setNameComplet] =useState(null);
   
   const enviar = handleSubmit(async(data) => {
     console.log(data )
-
+    setNameComplet(data['name']+" "+data['lastName'])
     const res = await createInvitados(data);
     console.log(res )
     setModalShow(true)
@@ -47,7 +47,7 @@ function BasicExample() {
         </Form>
 
         <ModalS show={modalShow}
-          onHide={() => setModalShow(false)}></ModalS>
+          onHide={() => setModalShow(false)} name={nameComplet}></ModalS>
       </div>
 
     </div>
