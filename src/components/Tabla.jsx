@@ -7,7 +7,17 @@ import {getAll} from '../api/invitados.api'
 
 
 function Tabla() {
-  const [datos,setDatos]=useState(null)}
+  const [datos,setDatos]=useState(null)
+  useEffect(()=>{
+    console.log("entras")
+    async function loadInvitados(){
+      const res = await getAll()
+      console.log(res)
+      setDatos(res.data)
+    }
+
+    loadInvitados();
+  }, [])
 
   return (
     <div className='container'>
