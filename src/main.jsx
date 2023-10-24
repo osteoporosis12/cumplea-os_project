@@ -15,21 +15,6 @@ const router = createBrowserRouter([
     path: "xd",
     element: <Tabla/>,
   },
-  {
-    path: "/ja",
-    element: <App/>,
-    
-  },
-  {
-    path: "/jaja",
-    element: <App/>,
-    
-  },
-  {
-    path: "/jajaja",
-    element: <App/>,
-    
-  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
