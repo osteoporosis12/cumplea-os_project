@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     
   },
   {
-    path: "xd",
+    path: "TablaInvitados",
     element: <Tabla/>,
   },
 ]);

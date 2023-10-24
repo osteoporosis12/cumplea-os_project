@@ -6,11 +6,26 @@ import { getAll, deleteItem } from '../api/invitados.api';
 
 function Tabla() {
   const [datos, setDatos] = useState(null);
+  const [invitados, setInvitados] = useState(0);
+  const [acompañantes, setAcompañantes] = useState(0);
+
+  function contar(data) {
+    let i=0;
+    let a=0.0;
+    data.map((person, index) => {
+    i++;
+    a+=parseInt(person.parnerts);
+  })
+  setAcompañantes(a);
+  setInvitados(i);
+  }
+
 
   useEffect(() => {
     async function loadInvitados() {
       const res = await getAll();
       setDatos(res.data.items);
+      contar(res.data.items)
     }
 
     loadInvitados();
@@ -18,7 +33,9 @@ function Tabla() {
 
   const handleDelete = async (id) => {
     await deleteItem(id);
+    contar(datos)
     setDatos(datos.filter((item) => item._id !== id));
+    
   };
 
   return (
@@ -47,6 +64,12 @@ function Tabla() {
                 </td>
               </tr>
             ))}
+            <tr key="xddsa">
+                <td>{}</td>
+                <td>Total: {invitados}</td>
+                <td>{}</td>
+                <td>Total: {acompañantes}</td>
+              </tr>
         </tbody>
       </Table>
     </div>
