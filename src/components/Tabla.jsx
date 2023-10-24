@@ -9,7 +9,8 @@ function Tabla() {
   const [invitados, setInvitados] = useState(0);
   const [acompañantes, setAcompañantes] = useState(0);
 
-  function contar(data) {
+  const contar=(data)=> {
+    if( data==null) return;
     let i=0;
     let a=0.0;
     data.map((person, index) => {
@@ -25,7 +26,6 @@ function Tabla() {
     async function loadInvitados() {
       const res = await getAll();
       setDatos(res.data.items);
-      contar(res.data.items)
     }
 
     loadInvitados();
@@ -33,10 +33,12 @@ function Tabla() {
 
   const handleDelete = async (id) => {
     await deleteItem(id);
-    contar(datos)
     setDatos(datos.filter((item) => item._id !== id));
-    
+   
   };
+  useEffect(()=>{
+    contar(datos)
+  },[datos])
 
   return (
     <div className='container'>
