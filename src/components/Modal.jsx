@@ -21,7 +21,7 @@ function ModalS(props) {
         </p>
       </Modal.Body>
       <Modal.Footer>
-      <a className='continer icon2' href='https://maps.app.goo.gl/sPrKFTo93J3TL8eYA' target='_blank'>
+      <a className='continer icon2' href='https://maps.app.goo.gl/AsxvMmLMAeHcVaTB9' target='_blank'>
       <Button variant="outline-success">VER MAPA</Button>
             
           </a>

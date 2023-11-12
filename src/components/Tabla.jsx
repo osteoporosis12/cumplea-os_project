@@ -41,8 +41,8 @@ function Tabla() {
   },[datos])
 
   return (
-    <div className='container'>
-      <h1>INVITADOS</h1>
+    <div className='container interfaz-especifica'>
+      <h1 className='text-light'>INVITADOS</h1>
       <Table responsive striped bordered hover>
         <thead>
           <tr>

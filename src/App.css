@@ -1,6 +1,6 @@
 .abs-center {
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: center;
     min-height: 100vh;
   }
@@ -14,7 +14,7 @@
   .form {
     width: 450px;
    background-color: white;
-  padding: 20px; /* Añade espacio alrededor del formulario si es necesario */
+  padding: 10px; /* Añade espacio alrededor del formulario si es necesario */
   border-radius: 8px; /* Opcional: agrega bordes redondeados al formulario */
 
   }
@@ -29,3 +29,27 @@
     border-radius: 8px; /* Opcional: agrega bordes redondeados al formulario */
   
   }
+  .xdd {
+    background-image: url("/fondo.png");
+    background-color: #291800;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+  }
+  
+  @media (max-width: 767px) {
+    .xdd {
+      background-size: 100% auto; /* Ajusta la imagen al ancho de la pantalla en dispositivos móviles */
+      background-position: center;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .xdd {
+      background-size: contain; /* Mantiene el mismo tamaño de la imagen en pantallas más grandes */
+      background-position: center;
+    }
+  }
+  

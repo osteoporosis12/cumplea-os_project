@@ -1,6 +1,4 @@
-#root{
-    background-image: url("/fondo.jpg");
-    background-color: 'rgba(0, 0, 0, 0.5)'; 
-    background-size: cover;
-}
-    
+#root {
+    background-color: #291800;
+    min-height: 100vh;
+  }
