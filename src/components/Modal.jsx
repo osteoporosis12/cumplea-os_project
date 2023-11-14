@@ -17,7 +17,10 @@ function ModalS(props) {
       <Modal.Body>
         <h4>{props.name} se te registrado correctamente</h4>
         <p>
-          Has sido añadido a la lista de invitados!
+          Has sido añadido a la lista de invitados! 
+        </p>
+        <p>
+          Recuerda que es tematica NARCOS
         </p>
       </Modal.Body>
       <Modal.Footer>
